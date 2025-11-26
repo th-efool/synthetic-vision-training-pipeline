@@ -1,0 +1,26 @@
+# Core Python packages
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.9.2
+seaborn==0.13.2
+opencv-python==4.10.0.84
+scikit-learn==1.5.1
+
+# PyTorch (for YOLOv8 training)
+torch==2.4.0
+torchvision==0.19.0
+
+# Ultralytics YOLOv8
+ultralytics==8.3.21
+
+# Image processing and augmentation
+albumentations==1.4.4
+Pillow==10.4.0
+
+# Utilities
+tqdm==4.66.5
+PyYAML==6.0.2
+
+# Jupyter (if using notebooks)
+jupyter==1.1.0
+ipykernel==6.29.5
