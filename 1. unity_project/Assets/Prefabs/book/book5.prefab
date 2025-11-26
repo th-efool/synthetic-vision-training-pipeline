@@ -170,16 +170,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7493689433833740649}
-  m_LocalRotation: {x: -0.003843754, y: -0.0009286328, z: -0.21857217, w: 0.9758128}
-  m_LocalPosition: {x: -0.17, y: -1.46, z: 0.01}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -0.0038953773, y: -0.00068053586, z: -0.15561877, w: 0.98780924}
+  m_LocalPosition: {x: 3.128, y: -1.161, z: -0.222}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5302469687530908213}
   - {fileID: 4735968452162836289}
   m_Father: {fileID: 6568050233875291958}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.453, y: -0.008, z: -25.251}
+  m_LocalEulerAnglesHint: {x: -0.453, y: -0.008, z: -17.905}
 --- !u!1 &7984653033595242606
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6568050233875291958}
+  - component: {fileID: 4202156693456492310}
   m_Layer: 0
   m_Name: book5
   m_TagString: Untagged
@@ -203,7 +204,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7984653033595242606}
-  m_LocalRotation: {x: 0.024534035, y: -0.69523543, z: -0.023757158, w: 0.7179704}
+  m_LocalRotation: {x: 0.024533909, y: -0.69523555, z: -0.023754634, w: 0.71797025}
   m_LocalPosition: {x: -2.19, y: 0.15, z: 6.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -212,6 +213,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.126, y: -88.161, z: -3.912}
+--- !u!114 &4202156693456492310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984653033595242606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - book
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &8199911087777016842
 GameObject:
   m_ObjectHideFlags: 0

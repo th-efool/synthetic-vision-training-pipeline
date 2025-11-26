@@ -106,8 +106,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843342877067271664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.4, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.030152986, z: -1.8189894e-11, w: 0.9995454}
+  m_LocalPosition: {x: -40.9, y: -16.6, z: -32.5}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -115,7 +115,7 @@ Transform:
   - {fileID: 4931064831839023635}
   m_Father: {fileID: 6626844689048636946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.456, z: 0}
 --- !u!1 &6799467588599809113
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6626844689048636946}
+  - component: {fileID: 8593305911408482981}
   m_Layer: 0
   m_Name: bottle1
   m_TagString: Untagged
@@ -141,13 +142,29 @@ Transform:
   m_GameObject: {fileID: 6799467588599809113}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -7.4, y: 0.040133476, z: -4.3039565}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.05, y: 0.050000004, z: 0.050000004}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2333485485990481231}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &8593305911408482981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799467588599809113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - bottle
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &8939471390874504577
 GameObject:
   m_ObjectHideFlags: 0

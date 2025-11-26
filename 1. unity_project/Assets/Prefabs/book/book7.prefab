@@ -138,8 +138,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399781127485363992}
-  m_LocalRotation: {x: 0.039270185, y: -0.5060574, z: -0.0666604, w: 0.8590228}
-  m_LocalPosition: {x: 0.203, y: 0.072, z: -0.155}
+  m_LocalRotation: {x: 0.028597653, y: -0.7012991, z: -0.022399753, w: 0.711941}
+  m_LocalPosition: {x: 0.9138548, y: -0.03455852, z: -0.17640713}
   m_LocalScale: {x: 1.8300002, y: 1.8300002, z: 1.8300002}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -147,7 +147,7 @@ Transform:
   - {fileID: 6434554648805418294}
   m_Father: {fileID: 4429780647772915918}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -61.005, z: -8.875}
+  m_LocalEulerAnglesHint: {x: 0.533, y: -89.156, z: -4.129}
 --- !u!1 &2283000254930848986
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4429780647772915918}
+  - component: {fileID: 1842518412625008544}
   m_Layer: 0
   m_Name: book7
   m_TagString: Untagged
@@ -212,6 +213,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1842518412625008544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094468713687548549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - book
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &8623759919174466805
 GameObject:
   m_ObjectHideFlags: 0

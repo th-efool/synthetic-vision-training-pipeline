@@ -138,15 +138,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5342597904548602490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.012458748, y: -0.13050197, z: 0.018755004, w: 0.99119234}
+  m_LocalPosition: {x: -0.18003102, y: 0.009488096, z: -0.0001290515}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3708079382073716258}
   m_Father: {fileID: 5683533279157949273}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.135, y: -15.024, z: 2.318}
 --- !u!1 &5437024504427157778
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683533279157949273}
+  - component: {fileID: 8548140146076316029}
   m_Layer: 0
   m_Name: book8
   m_TagString: Untagged
@@ -170,7 +171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5437024504427157778}
-  m_LocalRotation: {x: 0.018457472, y: -0.582779, z: -0.013241947, w: 0.8123132}
+  m_LocalRotation: {x: 0.01845765, y: -0.5827816, z: -0.01323916, w: 0.8123113}
   m_LocalPosition: {x: 0.653, y: 1.7970002, z: 2.345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -178,7 +179,23 @@ Transform:
   - {fileID: 4656596700413862530}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 161.334, y: 89.12, z: 87.252}
+  m_LocalEulerAnglesHint: {x: 179.166, y: 108.668, z: 177.534}
+--- !u!114 &8548140146076316029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437024504427157778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - book
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &5733897854771997939
 GameObject:
   m_ObjectHideFlags: 0

@@ -55,16 +55,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187938880685715395}
-  m_LocalRotation: {x: 0.5152955, y: -0.45885825, z: -0.5458611, w: 0.47534758}
-  m_LocalPosition: {x: -3.5127416, y: -2.0515332, z: -0.68285966}
-  m_LocalScale: {x: 1.83, y: 1.83, z: 1.83}
+  m_LocalRotation: {x: 0.70491153, y: 0.003891617, z: -0.7091919, w: -0.011465311}
+  m_LocalPosition: {x: -0.47994557, y: 0.09820032, z: -2.3375127}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4064626724023025103}
   - {fileID: 3316383118311142507}
   m_Father: {fileID: 7001631050014348915}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.634, y: 272.742, z: 262.704}
+  m_LocalEulerAnglesHint: {x: -0.61, y: 270.353, z: 178.754}
 --- !u!1 &1525486926862620145
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7001631050014348915}
+  - component: {fileID: 4392123268752291746}
   m_Layer: 0
   m_Name: book3
   m_TagString: Untagged
@@ -203,7 +204,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8067279183812888148}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.043, y: 1.927, z: 0.024999963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -211,7 +212,23 @@ Transform:
   - {fileID: 4706844583501210066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &4392123268752291746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067279183812888148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - book
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &8954477821156612398
 GameObject:
   m_ObjectHideFlags: 0

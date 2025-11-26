@@ -1030,15 +1030,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6354121767577325734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 1.1641532e-10, y: -0.008631613, z: 9.094947e-13, w: 0.9999628}
+  m_LocalPosition: {x: -0.02, y: -0.49, z: -2.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2413761058376228094}
   m_Father: {fileID: 6689304560769016197}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.989, z: 0}
 --- !u!1 &6448847434685754318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6689304560769016197}
+  - component: {fileID: 677833940179024069}
   m_Layer: 0
   m_Name: bottle2
   m_TagString: Untagged
@@ -1070,7 +1071,23 @@ Transform:
   - {fileID: 5950757517787598942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &677833940179024069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448847434685754318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - bottle
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &6841524975362108342
 GameObject:
   m_ObjectHideFlags: 0

@@ -138,15 +138,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181758130282110850}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_LocalRotation: {x: 0.6873749, y: 0.17433019, z: -0.20791802, w: 0.6737172}
+  m_LocalPosition: {x: -0.15, y: -0.14000002, z: 0.09000015}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2871576455610124492}
   m_Father: {fileID: 7748104321475609111}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 92.93799, y: 83.559, z: 52.184998}
 --- !u!1 &7939015226669828188
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7748104321475609111}
+  - component: {fileID: 3960306992107676665}
   m_Layer: 0
   m_Name: book2
   m_TagString: Untagged
@@ -170,7 +171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7939015226669828188}
-  m_LocalRotation: {x: -0.87495303, y: 0.030010782, z: -0.48327684, w: 0.000246201}
+  m_LocalRotation: {x: 0.87495536, y: -0.030011088, z: 0.48327276, w: -0.00024139695}
   m_LocalPosition: {x: 1.75, y: 1.76, z: 2.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -178,4 +179,20 @@ Transform:
   - {fileID: 6929586441564723824}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 178.362, y: -57.783997, z: 3.024994}
+--- !u!114 &3960306992107676665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939015226669828188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - book
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
