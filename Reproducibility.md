@@ -223,7 +223,7 @@ runs/
         └── predictions/
 ```
 
-## Part 5 — Evaluating Trained Models on Real Images
+## Part 5 — Testing Trained Models on Real Images
 
 The repository includes three evaluation scripts, each corresponding to one model setup:
 Navigate to `2. python_scripts/src/test_script`
@@ -252,22 +252,34 @@ test_script/
 ├─ pure_yolo_best.pt  
 └─ synth_run_best.pt
 ```
-
+Each script runs inference class-by-class on folder-structured real images and generates:
+```
+results.csv  
+per_class_metrics.csv  
+confusion_matrix.html  
+summary.json
+```
+---
+### Run model evaluation
+Hybrid (Model A):
 ```bash
-python evaluate.py --weights runs/detect/synth_only_run/weights/best.pt \
-                   --data data_yaml/synthetic.yaml
+python mixed_model_test.py
 ```
-
-This produces:
+Pure YOLO (Model B):
 ```
-runs/detect/synth_only_run/metrics.json
+python pure_yolo_test.py
 ```
-
-Which contains:
-- mAP50
-- mAP50-95
-- per-class AP
-- precision/recall curves
+Synthetic-only (Model C):
+```
+python synth_model_test.py
+```
+Each execution will print evaluation stats and create an output folder containing:
+```
+overall_accuracy
+per-class precision / recall / f1
+confusion matrix (interactive, .html)
+complete per-image predictions
+```
 
 ## **6. Reproducibility Guarantees**
 - All runs use fixed seeds (`--seed 42`)
