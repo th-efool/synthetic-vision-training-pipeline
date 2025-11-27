@@ -1,0 +1,11 @@
+names:
+  - bottle
+  - cup
+  - book
+  - laptop
+  - chair
+
+nc: 5
+
+train: yolo_synthetic_dataset/images/train
+val:   yolo_synthetic_dataset/images/val

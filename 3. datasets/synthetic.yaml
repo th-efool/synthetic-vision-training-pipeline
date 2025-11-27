@@ -1,9 +1,0 @@
-names:
-- cup
-- bottle
-- chair
-- laptop
-- book
-nc: 5
-train: /mnt/data/unity-perception-model/datasets/synthetic/images/train
-val: /mnt/data/unity-perception-model/datasets/synthetic/images/val
