@@ -1,0 +1,28 @@
+{
+  "unityVersion": "2021.3.45f2",
+  "perceptionVersion": "1.0.0-preview.1",
+  "renderPipeline": "HDRP",
+  "simulationStartTime": "27-11-2025 18:28:12",
+  "scenarioRandomSeed": 539662031,
+  "scenarioActiveRandomizers": [
+    "ColorRandomizer",
+    "LightRandomizer",
+    "PrefabPlacementRandomizer"
+  ],
+  "totalFrames": 100,
+  "totalSequences": 100,
+  "sensors": [
+    "camera"
+  ],
+  "metricCollectors": [
+    "scenario_iteration",
+    "random-seed"
+  ],
+  "simulationEndTime": "27-11-2025 18:28:19",
+  "annotators": [
+    {
+      "name": "bounding box",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    }
+  ]
+}

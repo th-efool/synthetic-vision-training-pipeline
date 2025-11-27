@@ -1,0 +1,41 @@
+{
+  "overall_accuracy": 0.9900497512437811,
+  "num_images": 201,
+  "per_class": [
+    {
+      "class": "book",
+      "precision": 1.0,
+      "recall": 0.9354838709677419,
+      "f1": 0.9666666666666667,
+      "support": 31
+    },
+    {
+      "class": "bottle",
+      "precision": 0.9811320754716981,
+      "recall": 1.0,
+      "f1": 0.9904761904761905,
+      "support": 52
+    },
+    {
+      "class": "chair",
+      "precision": 0.9642857142857143,
+      "recall": 1.0,
+      "f1": 0.9818181818181818,
+      "support": 27
+    },
+    {
+      "class": "cup",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 61
+    },
+    {
+      "class": "laptop",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    }
+  ]
+}

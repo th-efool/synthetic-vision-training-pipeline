@@ -1,0 +1,11 @@
+names:
+  - bottle
+  - cup
+  - book
+  - laptop
+  - chair
+
+nc: 5
+
+train: images/train
+val:   images/val
