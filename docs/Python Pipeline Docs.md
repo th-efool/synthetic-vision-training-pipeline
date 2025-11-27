@@ -1,5 +1,4 @@
 # Python Pipeline Documentation
-(Obsidian / README-ready — short, exact, copy-paste)
 
 ## Overview
 This document describes the Python-side pipeline for converting Unity Perception outputs, preparing datasets, training YOLOv8 (synthetic-only and mixed), evaluating results, and exporting plots.  
