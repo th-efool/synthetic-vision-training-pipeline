@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Model Comparison – F1 Scores and Accuracy</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+      color: #222;
+    }
+    h1, h2 {
+      margin-bottom: 0.3rem;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .chart-wrapper {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      max-width: 960px;
+    }
+    canvas {
+      width: 100%;
+      height: 420px;
+      max-width: 920px;
+      border-radius: 4px;
+      background: #ffffff;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Model Comparison</h1>
+  <p>Per-class F1 scores and overall accuracy for three model configurations evaluated on the same real dataset.</p>
+
+  <div class="section">
+    <h2>Per-class F1 Scores</h2>
+    <div class="chart-wrapper">
+      <canvas id="f1Chart" width="920" height="420"></canvas>
+    </div>
+    <p class="note">
+      Classes: book, bottle, chair, cup, laptop. Bars are grouped by class: Model A (hybrid), Model B (pure YOLO), Model C (synthetic-only).
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Overall Accuracy</h2>
+    <div class="chart-wrapper">
+      <canvas id="accChart" width="920" height="420"></canvas>
+    </div>
+    <p class="note">
+      Overall top-1 accuracy on the folder-structured real-image test set.
+    </p>
+  </div>
+
+  <script>
+    // Data
+    const classes = ["book", "bottle", "chair", "cup", "laptop"];
+    const f1A = [0.9666666667, 0.9904761905, 0.9818181818, 1.0, 1.0];
+    const f1B = [0.1764705882, 0.7022900763, 0.88, 0.8076923077, 0.9285714286];
+    const f1C = [0.0, 0.0869565217, 0.3428571429, 0.0634920635, 0.0645161290];
+
+    const modelColors = {
+      A: "#1f77b4",
+      B: "#ff7f0e",
+      C: "#2ca02c"
+    };
+
+    const accuracies = {
+      A: 0.9900497512,
+      B: 0.6915422886,
+      C: 0.1194029851
+    };
+
+    function drawGroupedBarChart(canvasId, labels, dataSeries, options) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !canvas.getContext) return;
+      const ctx = canvas.getContext("2d");
+
+      const width = canvas.width;
+      const height = canvas.height;
+
+      // Clear
+      ctx.clearRect(0, 0, width, height);
+
+      const padding = { top: 30, right: 20, bottom: 80, left: 60 };
+      const chartWidth = width - padding.left - padding.right;
+      const chartHeight = height - padding.top - padding.bottom;
+
+      // Y scale 0..1.0
+      const yMax = 1.0;
+      const yTicks = 5;
+
+      // Background
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, width, height);
+
+      // Axes
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padding.left, padding.top);
+      ctx.lineTo(padding.left, padding.top + chartHeight);
+      ctx.lineTo(padding.left + chartWidth, padding.top + chartHeight);
+      ctx.stroke();
+
+      // Y ticks and grid
+      ctx.font = "11px system-ui, sans-serif";
+      ctx.fillStyle = "#444";
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+      ctx.strokeStyle = "#e0e0e0";
+      ctx.lineWidth = 1;
+
+      for (let i = 0; i <= yTicks; i++) {
+        const t = i / yTicks;
+        const yValue = yMax * t;
+        const y = padding.top + chartHeight - t * chartHeight;
+        ctx.fillText(yValue.toFixed(1), padding.left - 8, y);
+        // grid line
+        ctx.beginPath();
+        ctx.moveTo(padding.left, y);
+        ctx.lineTo(padding.left + chartWidth, y);
+        ctx.stroke();
+      }
+
+      // Bars
+      const groupCount = labels.length;
+      const seriesCount = dataSeries.length;
+      const groupWidth = chartWidth / groupCount;
+      const barGroupWidth = groupWidth * 0.7;
+      const barWidth = barGroupWidth / seriesCount;
+
+      dataSeries.forEach((series, sIdx) => {
+        ctx.fillStyle = series.color;
+        for (let i = 0; i < groupCount; i++) {
+          const value = series.values[i];
+          const xBase = padding.left + i * groupWidth + (groupWidth - barGroupWidth) / 2;
+          const x = xBase + sIdx * barWidth;
+          const barHeight = value * chartHeight / yMax;
+          const y = padding.top + chartHeight - barHeight;
+          ctx.fillRect(x, y, barWidth - 2, barHeight);
+
+          // value label
+          if (value > 0) {
+            ctx.fillStyle = "#111";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "bottom";
+            ctx.font = "10px system-ui, sans-serif";
+            ctx.fillText(value.toFixed(2), x + (barWidth - 2) / 2, y - 2);
+            ctx.fillStyle = series.color;
+          }
+        }
+      });
+
+      // X labels
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.fillStyle = "#222";
+      ctx.font = "12px system-ui, sans-serif";
+      for (let i = 0; i < groupCount; i++) {
+        const xCenter = padding.left + i * groupWidth + groupWidth / 2;
+        const y = padding.top + chartHeight + 8;
+        ctx.fillText(labels[i], xCenter, y);
+      }
+
+      // Legend
+      const legendItems = dataSeries.map(s => s.name);
+      const legendX = padding.left;
+      let legendY = padding.top - 20;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      ctx.font = "11px system-ui, sans-serif";
+
+      legendItems.forEach((name, idx) => {
+        const series = dataSeries[idx];
+        const x = legendX + idx * 180;
+        ctx.fillStyle = series.color;
+        ctx.fillRect(x, legendY - 6, 12, 12);
+        ctx.fillStyle = "#222";
+        ctx.fillText(name, x + 18, legendY);
+      });
+    }
+
+    function drawAccuracyChart(canvasId, accuracies) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !canvas.getContext) return;
+      const ctx = canvas.getContext("2d");
+
+      const width = canvas.width;
+      const height = canvas.height;
+
+      ctx.clearRect(0, 0, width, height);
+
+      const padding = { top: 30, right: 20, bottom: 80, left: 60 };
+      const chartWidth = width - padding.left - padding.right;
+      const chartHeight = height - padding.top - padding.bottom;
+
+      const yMax = 1.0;
+      const yTicks = 5;
+
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, width, height);
+
+      // axes
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padding.left, padding.top);
+      ctx.lineTo(padding.left, padding.top + chartHeight);
+      ctx.lineTo(padding.left + chartWidth, padding.top + chartHeight);
+      ctx.stroke();
+
+      // y grid
+      ctx.font = "11px system-ui, sans-serif";
+      ctx.fillStyle = "#444";
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+      ctx.strokeStyle = "#e0e0e0";
+      ctx.lineWidth = 1;
+
+      for (let i = 0; i <= yTicks; i++) {
+        const t = i / yTicks;
+        const yValue = yMax * t;
+        const y = padding.top + chartHeight - t * chartHeight;
+        ctx.fillText(yValue.toFixed(1), padding.left - 8, y);
+        ctx.beginPath();
+        ctx.moveTo(padding.left, y);
+        ctx.lineTo(padding.left + chartWidth, y);
+        ctx.stroke();
+      }
+
+      const modelKeys = ["A", "B", "C"];
+      const labels = ["Model A (Hybrid)", "Model B (Pure YOLO)", "Model C (Synthetic-only)"];
+      const values = modelKeys.map(k => accuracies[k]);
+      const colors = modelKeys.map(k => modelColors[k]);
+
+      const barCount = values.length;
+      const barWidth = chartWidth / (barCount * 1.6);
+
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.font = "12px system-ui, sans-serif";
+
+      for (let i = 0; i < barCount; i++) {
+        const value = values[i];
+        const xCenter = padding.left + (i + 0.5) * (chartWidth / barCount);
+        const barHeight = value * chartHeight / yMax;
+        const x = xCenter - barWidth / 2;
+        const y = padding.top + chartHeight - barHeight;
+
+        ctx.fillStyle = colors[i];
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        // percentage above bar
+        ctx.fillStyle = "#111";
+        ctx.textBaseline = "bottom";
+        ctx.font = "11px system-ui, sans-serif";
+        ctx.fillText((value * 100).toFixed(1) + "%", xCenter, y - 4);
+
+        // label under x-axis
+        ctx.fillStyle = "#222";
+        ctx.textBaseline = "top";
+        ctx.font = "11px system-ui, sans-serif";
+        const labelLines = labels[i].split(" ");
+        const lineHeight = 13;
+        let baseY = padding.top + chartHeight + 8;
+        for (let j = 0; j < labelLines.length; j++) {
+          ctx.fillText(labelLines[j], xCenter, baseY + j * lineHeight);
+        }
+      }
+    }
+
+    // Draw charts when page loads
+    window.addEventListener("load", function () {
+      drawGroupedBarChart("f1Chart", classes, [
+        { name: "Model A (Hybrid: Synthetic + Real)", values: f1A, color: modelColors.A },
+        { name: "Model B (Pure YOLO / Real-focused)", values: f1B, color: modelColors.B },
+        { name: "Model C (Synthetic-only)", values: f1C, color: modelColors.C }
+      ]);
+
+      drawAccuracyChart("accChart", accuracies);
+    });
+  </script>
+</body>
+</html>
