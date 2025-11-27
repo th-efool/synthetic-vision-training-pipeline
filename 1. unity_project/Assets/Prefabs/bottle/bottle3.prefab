@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6718202554546959915}
   - component: {fileID: 2725112091597996750}
+  - component: {fileID: -2702130820792719407}
   m_Layer: 0
   m_Name: bottle3
   m_TagString: Untagged
@@ -164,3 +165,15 @@ MonoBehaviour:
   - bottle
   useAutoLabeling: 0
   autoLabelingSchemeType: 
+--- !u!114 &-2702130820792719407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381633921621113952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e54e30bb74162b2d6bca9b68f5482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

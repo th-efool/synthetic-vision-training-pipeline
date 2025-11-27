@@ -357,6 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3993286544334118502}
   - component: {fileID: 728519583261560857}
+  - component: {fileID: 4182796609155218270}
   m_Layer: 0
   m_Name: Laptop8
   m_TagString: Untagged
@@ -396,6 +397,18 @@ MonoBehaviour:
   - laptop
   useAutoLabeling: 0
   autoLabelingSchemeType: 
+--- !u!114 &4182796609155218270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657142151634637869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e54e30bb74162b2d6bca9b68f5482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4505692381736865170
 GameObject:
   m_ObjectHideFlags: 0

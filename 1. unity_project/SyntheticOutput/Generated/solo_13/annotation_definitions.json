@@ -1,0 +1,31 @@
+{
+  "annotationDefinitions": [
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "bottle"
+        },
+        {
+          "label_id": 2,
+          "label_name": "cup"
+        },
+        {
+          "label_id": 3,
+          "label_name": "book"
+        },
+        {
+          "label_id": 4,
+          "label_name": "laptop"
+        },
+        {
+          "label_id": 5,
+          "label_name": "chair"
+        }
+      ]
+    }
+  ]
+}

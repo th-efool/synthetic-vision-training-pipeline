@@ -1,0 +1,19 @@
+{
+  "unityVersion": "2021.3.45f2",
+  "perceptionVersion": "1.0.0-preview.1",
+  "renderPipeline": "HDRP",
+  "simulationStartTime": "27-11-2025 04:03:53",
+  "totalFrames": 177,
+  "totalSequences": 1,
+  "sensors": [
+    "camera"
+  ],
+  "metricCollectors": [],
+  "simulationEndTime": "27-11-2025 04:04:38",
+  "annotators": [
+    {
+      "name": "bounding box",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    }
+  ]
+}

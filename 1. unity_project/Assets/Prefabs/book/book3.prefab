@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7001631050014348915}
   - component: {fileID: 4392123268752291746}
+  - component: {fileID: -2172359076331905853}
   m_Layer: 0
   m_Name: book3
   m_TagString: Untagged
@@ -229,6 +230,18 @@ MonoBehaviour:
   - book
   useAutoLabeling: 0
   autoLabelingSchemeType: 
+--- !u!114 &-2172359076331905853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067279183812888148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e54e30bb74162b2d6bca9b68f5482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8954477821156612398
 GameObject:
   m_ObjectHideFlags: 0

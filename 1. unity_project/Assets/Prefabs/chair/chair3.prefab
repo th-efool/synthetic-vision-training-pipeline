@@ -919,6 +919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6338245961480780681}
   - component: {fileID: 439922442815650504}
+  - component: {fileID: -2564395573794398115}
   m_Layer: 0
   m_Name: chair3
   m_TagString: Untagged
@@ -958,6 +959,18 @@ MonoBehaviour:
   - chair
   useAutoLabeling: 0
   autoLabelingSchemeType: 
+--- !u!114 &-2564395573794398115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5935250094121431490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e54e30bb74162b2d6bca9b68f5482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6303038784410074478
 GameObject:
   m_ObjectHideFlags: 0
