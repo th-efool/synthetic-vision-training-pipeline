@@ -1,6 +1,6 @@
-# 🚀 Training a Large Vision Model Using Unity‑Generated Synthetic Data
+# Training a Large Vision Model Using Unity‑Generated Synthetic Data
 
-## 🔍 Abstract
+## Abstract
 This project explores whether **synthetic data generated using Unity Perception** can improve detection accuracy for **underrepresented object classes** when training modern object detection models like **YOLOv8**.  
 We generate a scalable synthetic dataset of 3D objects (bottle, cup, book, laptop, chair) — randomizing **lighting, poses, backgrounds & camera angles** — and convert it into YOLO‑compatible format.  
 We then train 3 variants:
@@ -12,7 +12,7 @@ Our results confirm that synthetic images **significantly boost recall & mAP**, 
 
 ---
 
-## 🧠 Tools & Frameworks
+## Tools & Frameworks
 | Component | Used For |
 |---|---|
 | **Unity Perception** | Synthetic data generation & labeling |
@@ -24,7 +24,7 @@ Our results confirm that synthetic images **significantly boost recall & mAP**, 
 
 ---
 
-## 📁 Dataset Structure
+## Dataset Structure
 ```
 python_scripts/src/datasets/  
 │── yolo_synthetic_dataset/  
@@ -40,7 +40,7 @@ python_scripts/src/datasets/
 ```
 ---
 
-## 🔻 Dataset Format (Post‑Conversion)
+## Dataset Format (Post‑Conversion)
 ```
 python_scripts/datasets/
 ├── yolo_synthetic_dataset/
@@ -57,7 +57,7 @@ class_id x_center y_center width height
 ```
 
 ---
-## 🔧 Reproducibility – How to Run
+## Reproducibility – How to Run
 
 ### **1) Install environment**
 
@@ -71,11 +71,11 @@ class_id x_center y_center width height
 
 ### **3) Run training notebooks**
 
-🚀 Synthetic‑only
+Synthetic‑only
 
 `python_scripts/SyntheticTraining.ipynb`
 
-🔥 Mixed‑training (real + synthetic)
+Mixed‑training (real + synthetic)
 
 `python_scripts/MixedTraining.ipynb`
 
