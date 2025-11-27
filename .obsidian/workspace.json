@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reproducibility.md",
+                "file": "docs/Testing Models Docs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reproducibility"
+              "title": "Testing Models Docs"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reproducibility.md",
+                "file": "docs/Testing Models Docs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Reproducibility"
+              "title": "Backlinks for Testing Models Docs"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reproducibility.md",
+                "file": "docs/Testing Models Docs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Reproducibility"
+              "title": "Outgoing links from Testing Models Docs"
             }
           },
           {
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reproducibility.md",
+                "file": "docs/Testing Models Docs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Reproducibility"
+              "title": "Outline of Testing Models Docs"
             }
           }
         ]
@@ -186,6 +186,11 @@
   },
   "active": "999091c507c7ed10",
   "lastOpenFiles": [
+    "docs/Python Pipeline Docs.md",
+    "docs/Training Docs.md",
+    "docs/Testing Models Docs.md",
+    "docs/Unity Perception Docs.md",
+    "Reproducibility.md",
     "4. results/predictions/model_comparison_charts.html",
     "4. results/plots/results_plot.html",
     "4. results/plots/results_plot.txt",
@@ -199,7 +204,6 @@
     "1. unity_project/SyntheticOutput/solo/sequence.42/step0.frame_data.json",
     "1. unity_project/SyntheticOutput/solo/sequence.42/step0.camera.png",
     "1. unity_project/SyntheticOutput/solo/sequence.42",
-    "1. unity_project/SyntheticOutput/solo/sequence.39/step0.frame_data.json",
     "1. unity_project/SyntheticOutput/solo/sequence.39/step0.camera.png",
     "1. unity_project/SyntheticOutput/solo/sequence.38/step0.camera.png",
     "1. unity_project/SyntheticOutput/solo/sequence.37/step0.camera.png",
@@ -208,7 +212,6 @@
     "1. unity_project/SyntheticOutput/solo/sequence.34/step0.camera.png",
     "1. unity_project/SyntheticOutput/solo/sequence.33/step0.camera.png",
     "README.md",
-    "Reproducibility.md",
     "5. demo/VIDEO SCRIPT.md",
     "Week 2 Progress Log.md",
     "Week 4 Progress Log.md",
