@@ -7,5 +7,5 @@ names:
 
 nc: 5
 
-train: yolo_synthetic_dataset/images/train
-val:   yolo_synthetic_dataset/images/val
+train: images/train
+val:   images/val
