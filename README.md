@@ -1,4 +1,7 @@
 # Training a Large Vision Model Using Unity‑Generated Synthetic Data
+## Abstract
+This project explores whether **synthetic data generated using Unity Perception** can improve detection accuracy for **underrepresented object classes** when training modern object detection models like **YOLOv8**.  
+We generate a scalable synthetic dataset of 3D objects (bottle, cup, book, laptop, chair) — randomizing **lighting, poses, backgrounds & camera angles** — and convert it into YOLO‑compatible format.  
 
 ![Status](https://img.shields.io/badge/status-experimental%20research-blue.svg)
 ![Domain](https://img.shields.io/badge/domain-computer%20vision%20%7C%20object%20detection-blueviolet.svg)
@@ -9,9 +12,6 @@
 ![Training](https://img.shields.io/badge/training-CPU%20only-lightgrey.svg)
 ![Reproducibility](https://img.shields.io/badge/reproducible-yes-success.svg)
 
-## Abstract
-This project explores whether **synthetic data generated using Unity Perception** can improve detection accuracy for **underrepresented object classes** when training modern object detection models like **YOLOv8**.  
-We generate a scalable synthetic dataset of 3D objects (bottle, cup, book, laptop, chair) — randomizing **lighting, poses, backgrounds & camera angles** — and convert it into YOLO‑compatible format.  
 We then train 3 variants:
 1. **Synthetic‑only model**
 2. **Real‑only model**
