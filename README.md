@@ -12,6 +12,9 @@ We generate a scalable synthetic dataset of 3D objects (bottle, cup, book, lapto
 ![Training](https://img.shields.io/badge/training-CPU%20only-lightgrey.svg)
 ![Reproducibility](https://img.shields.io/badge/reproducible-yes-success.svg)
 
+<img src="https://github.com/th-efool/synthetic-vision-training-pipeline/blob/d351bc1f6a9c20f2fc9aa5b749fb482721af4e96/docs/gandr-collage.jpg" width="70%">
+
+
 We then train 3 variants:
 1. **Synthetic‑only model**
 2. **Real‑only model**
@@ -19,8 +22,7 @@ We then train 3 variants:
 
 Our results confirm that synthetic images **significantly boost recall & mAP**, especially for classes lacking real‑world representation.
 
-<img src="https://github.com/th-efool/synthetic-vision-training-pipeline/blob/d351bc1f6a9c20f2fc9aa5b749fb482721af4e96/docs/gandr-collage.jpg" width="100%">
-<img src="https://github.com/th-efool/synthetic-vision-training-pipeline/blob/d351bc1f6a9c20f2fc9aa5b749fb482721af4e96/docs/xxz.png" width="100%">
+<img src="https://github.com/th-efool/synthetic-vision-training-pipeline/blob/d351bc1f6a9c20f2fc9aa5b749fb482721af4e96/docs/xxz.png" width="70%">
 
 ---
 
